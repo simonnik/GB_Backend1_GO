@@ -109,7 +109,7 @@ func listHandler(w http.ResponseWriter, r *http.Request) {
 	err = json.NewEncoder(w).Encode(files)
 	if err != nil {
 		log.Printf("cannot convert data into json %v", err)
-		http.Error(w, "Unable to read directory", http.StatusBadRequest)
+		http.Error(w, "Cannot convert data into json", http.StatusBadRequest)
 		return
 	}
 }
